@@ -2,9 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ff1801;
+  background-color:#21263a;
   padding: 25px 80px;
-  box-shadow: 0 5px 15px darkred;
 }
 
 .navbar-items {
@@ -28,7 +27,7 @@
 }
 
 .single-navbar-item:hover {
-  color: black;
+  color: #ca291d;
 }
 
 @media (max-width: 750px) {
