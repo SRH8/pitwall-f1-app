@@ -1,9 +1,9 @@
 import { ConstructorsData, StandingsList } from '../models/Constructor';
 
-const baseUrl = 'https://ergast.com/api/f1/';
+const baseUrl = 'https://ergast.com/api/f1/current/';
 
-export const getConstructorStandings = async (): Promise<StandingsList[]> => {
-  const response = await fetch(`${baseUrl}current/constructorStandings.json`);
+export const getStandings = async (path: string): Promise<StandingsList[]> => {
+  const response = await fetch(`${baseUrl}${path}`);
   const data: ConstructorsData = await response.json();
 
   const standings: StandingsList[] = data.MRData.StandingsTable.StandingsLists;
