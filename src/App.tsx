@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './components/home/home';
 import Constructors from './components/constructors/Constructors';
 import Navbar from './components/navbar/Navbar';
-import Drivers from './components/drivers/drivers';
+import Drivers from './components/drivers/Drivers';
 import './App.css';
 
 const App: React.FC = () => {
