@@ -16,10 +16,10 @@ export interface MRData {
 
 export interface StandingsTable {
   season: string;
-  StandingsLists: StandingsList[];
+  StandingsLists: DriverStandingsList[];
 }
 
-export interface StandingsList {
+export interface DriverStandingsList {
   season: string;
   round: string;
   DriverStandings: DriverStanding[];

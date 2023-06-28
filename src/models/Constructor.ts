@@ -14,10 +14,10 @@ export interface MRData {
 
 export interface StandingsTable {
   season: string;
-  StandingsLists: StandingsList[];
+  StandingsLists: ConstructorStandingsList[];
 }
 
-export interface StandingsList {
+export interface ConstructorStandingsList {
   season: string;
   round: string;
   ConstructorStandings: ConstructorStanding[];

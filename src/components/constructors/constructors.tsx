@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { RotatingLines } from 'react-loader-spinner';
-import { getStandings } from '../../utils/ApiUtils';
-import { ConstructorStanding, StandingsList } from '../../models/Constructor';
+import { getConstructorStandings } from '../../utils/ApiUtils';
+import { ConstructorStanding, ConstructorStandingsList } from '../../models/Constructor';
 import Error from '../error/Error';
 import './Constructors.css';
 
 const Constructors: React.FC = () => {
 
-  const [standings, setStandings] = useState<StandingsList>();
+  const [standings, setStandings] = useState<ConstructorStandingsList>();
   const [constructors, setConstructors] = useState<ConstructorStanding[]>([]);
   const [isLoading, setLoading] = useState<boolean>(false);
   const [hasError, setError] = useState<boolean>(false);
@@ -15,7 +15,7 @@ const Constructors: React.FC = () => {
   const loadData = async () => {
     setLoading(true);
     try {
-      const standingsData = await getStandings('constructorStandings.json');
+      const standingsData = await getConstructorStandings('constructorStandings.json');
       const constructorsData = standingsData[0].ConstructorStandings;
       setStandings(standingsData[0]);
       setConstructors(constructorsData);
