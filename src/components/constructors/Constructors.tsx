@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { RotatingLines } from 'react-loader-spinner';
 import { getConstructorStandings } from '../../utils/ApiUtils';
 import { ConstructorStanding, ConstructorStandingsList } from '../../models/Constructor';
 import Error from '../error/Error';
-import './Constructors.css';
+import LoadIndicator from '../common/load-indicator/Load-Indicator';
+import '../common/styles/Standings.css';
 
 const Constructors: React.FC = () => {
 
@@ -15,7 +15,7 @@ const Constructors: React.FC = () => {
   const loadData = async () => {
     setLoading(true);
     try {
-      const standingsData = await getConstructorStandings('constructorStandings.json');
+      const standingsData = await getConstructorStandings();
       const constructorsData = standingsData[0].ConstructorStandings;
       setStandings(standingsData[0]);
       setConstructors(constructorsData);
@@ -71,13 +71,7 @@ const Constructors: React.FC = () => {
             </div>
           </div> :
           <div className='load-indicator'>
-            <RotatingLines
-              strokeColor='grey'
-              strokeWidth='5'
-              animationDuration='0.95'
-              width='75'
-              visible={true}
-            />
+            <LoadIndicator />
           </div> : 
         <Error />
       }
