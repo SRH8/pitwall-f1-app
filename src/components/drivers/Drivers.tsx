@@ -3,7 +3,7 @@ import { DriverStanding, DriverStandingsList } from '../../models/Driver';
 import { getDriverStandings } from '../../utils/ApiUtils';
 import LoadIndicator from '../common/load-indicator/Load-Indicator';
 import Error from '../error/Error';
-import '../common/styles/Standings.css';
+import '../common/styles/Styles.css';
 
 const Drivers: React.FC = () => {
 

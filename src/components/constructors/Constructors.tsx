@@ -3,7 +3,7 @@ import { getConstructorStandings } from '../../utils/ApiUtils';
 import { ConstructorStanding, ConstructorStandingsList } from '../../models/Constructor';
 import Error from '../error/Error';
 import LoadIndicator from '../common/load-indicator/Load-Indicator';
-import '../common/styles/Standings.css';
+import '../common/styles/Styles.css';
 
 const Constructors: React.FC = () => {
 
