@@ -3,6 +3,7 @@ import '../styles/Styles.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import {faCircleInfo} from  '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom';
 
 const Footer: React.FC = () => {
     return (
@@ -20,15 +21,11 @@ const Footer: React.FC = () => {
             </span>
             <span className='footer-media'>
               <FontAwesomeIcon icon={faCircleInfo}/>
-              <a href=''>
-                About
-              </a>
+              <Link className='footer-media' to='/about'>About</Link>
             </span>
           </div>
         </footer>
-
       </>
-
     );
 }
 

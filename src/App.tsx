@@ -5,6 +5,7 @@ import Constructors from './components/constructors/Constructors';
 import Navbar from './components/common/navbar/Navbar';
 import Drivers from './components/drivers/Drivers';
 import Footer from './components/common/footer/Footer';
+import About from './components/about/About';
 import './App.css';
 
 const App: React.FC = () => {
@@ -16,6 +17,7 @@ const App: React.FC = () => {
           <Route path='/' element={<Home />} />
           <Route path='/constructors' element={<Constructors />} />
           <Route path='/drivers' element={<Drivers />} />
+          <Route path='/about' element={<About />} />
         </Routes>
       </main>
       <Footer />

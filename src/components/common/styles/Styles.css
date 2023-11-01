@@ -124,3 +124,12 @@ a:active {
   color: #21263a;
   margin-left: 20px;
 }
+
+.about-container {
+  display: flex;
+  justify-content: center;
+}
+
+.about-info {
+
+}
